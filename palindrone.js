@@ -3,14 +3,14 @@ var isPalindrome = function(x) {
         return false
     }
 
+    if (x < 10) {
+        return true
+    }
+ 
     let string = x.toString()
     let reverse = x.toString().split('').reverse().join("")
 
-    if (string === reverse) {
-        return true
-    } else {
-        return false
-    }
+    return string === reverse
 };
 
 console.log(isPalindrome(121121))
